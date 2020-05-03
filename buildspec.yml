@@ -1,0 +1,21 @@
+version: 0.2 
+
+phases: 
+  install: 
+    runtime-versions: 
+      nodejs: 10 
+  pre_build: 
+    commands: 
+      - echo Installing source NPM dependencies...
+      - npm install 
+  build: 
+    commands: 
+      - echo Build started on `date` 
+      - npm run build
+  post_build: 
+     commands:
+      - echo Copying the deployment artifacts
+artifacts:
+      files: 
+        - 'dist/*'
+      name: myFirstApp-BuildArtifact-$(date +%Y-%m-%d)
