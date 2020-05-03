@@ -17,5 +17,5 @@ phases:
       - echo Copying the deployment artifacts
 artifacts:
       files: 
-        - 'dist/*'
+        - package.json
       name: myFirstApp-BuildArtifact-$(date +%Y-%m-%d)
