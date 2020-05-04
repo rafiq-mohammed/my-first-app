@@ -18,5 +18,6 @@ phases:
 artifacts:
       files: 
         - dist/**/*
+        - package.json
       discard-paths: yes
       name: myFirstApp-BuildArtifact-$(date +%Y-%m-%d)
