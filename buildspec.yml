@@ -19,5 +19,6 @@ artifacts:
       files: 
         - dist/**/*
         - package.json
+        - server.js  
       discard-paths: yes
       name: myFirstApp-BuildArtifact-$(date +%Y-%m-%d)
