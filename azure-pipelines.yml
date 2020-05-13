@@ -15,6 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+      ConnectionType: 'AzureRM'
+      azureSubscription: 'Visual Studio Professional (b7c40887-d7d8-4159-80f0-f5f4af80ba56)'
+      appType: 'webAppLinux'
+      WebAppName: 'nodejs-demo1'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
 - script: |
     npm install
     npm run build
